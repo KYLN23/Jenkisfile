@@ -19,6 +19,14 @@ pipeline {
                 '''
             }
         }
+        stage('testing'){
+            steps{
+                sh '''
+                echo "Tareas de testing"
+                '''
+            }
+        }
+    
         stage('deployar') {
             steps {
                 sh '''
@@ -26,5 +34,6 @@ pipeline {
                 '''
             }
         }
+        
     }
 }
